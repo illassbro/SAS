@@ -1,0 +1,24 @@
+
+<exec>
+<exec name='plink' args='root@14.0.0.126' />
+<host>
+<host name='chewy' ip='14.0.0.126'/>
+	<cmd>
+			<cmd regex='login' write='root'/>
+			<cmd regex='password' write='root'/>
+			<cmd prompt='' write='export PS1='/>
+			<cmd prompt='' write='uname -a'/>
+			<cmd prompt='' write='df -h'/>
+			<cmd prompt='' write='ifconfig -a'/>
+			<cmd prompt='' write='cat /etc/resolv.conf'/>
+			<cmd prompt='' write='who -r'/>
+			<cmd prompt='' write='ps -ef'/>
+			<cmd prompt='' write='last'/>
+			<cmd prompt='' write='uptime'/>
+			<cmd prompt='' write='ps -ef | grep -i "nginx"'/>
+			<cmd prompt='' write='echo y | pacman -Syu'/>
+			<cmd prompt='' write='@done'/>
+	</cmd>
+
+</host>
+</exec>
